@@ -29,8 +29,6 @@ public class lgpage extends AppCompatActivity {
     private EditText password;
     FirebaseAuth firebaseAuth;
     private String emailpattern ="[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,7 +85,6 @@ public class lgpage extends AppCompatActivity {
         });
 
     }
-
     private void checkemailandpassword() {
     if(email.getText().toString().matches(emailpattern)){
         if(password.length() >= 8){
@@ -112,7 +109,6 @@ public class lgpage extends AppCompatActivity {
         Toast.makeText(this, "Incorrect email or password", Toast.LENGTH_SHORT).show();
     }
     }
-
     private void checkinputs() {
         if (!TextUtils.isEmpty(email.getText())) {
             if(!TextUtils.isEmpty(password.getText()) && password.length() >=0 ){
